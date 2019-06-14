@@ -1,0 +1,16 @@
+{
+  "name": "jdlubrano-request-logger",
+  "version": "0.0.1",
+  "description": "A web app to log incoming requests",
+  "main": "index.js",
+  "repository": "https://github.com/jdlubrano/jdlubrano-request-logger",
+  "author": "joel.lubrano@gmail.com",
+  "license": "MIT",
+  "engines": {
+    "node": "10.x"
+  },
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1"
+  }
+}
