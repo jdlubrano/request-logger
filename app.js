@@ -10,8 +10,20 @@ app.get('/ping', (req, res) => res.send('pong'));
 
 app.post('/logs', (req, res) => {
   console.log(`
-    INCOMING REQUEST
+    INCOMING REQUEST POST /logs
     HEADERS: ${JSON.stringify(req.headers)}
+    PARAMS: ${JSON.stringify(req.query)}
+    BODY: ${JSON.stringify(req.body)}
+  `);
+
+  res.status(200).send();
+});
+
+app.post('/v2/logs', (req, res) => {
+  console.log(`
+    INCOMING REQUEST POST /v2/logs
+    HEADERS: ${JSON.stringify(req.headers)}
+    PARAMS: ${JSON.stringify(req.query)}
     BODY: ${JSON.stringify(req.body)}
   `);
 
