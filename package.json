@@ -1,6 +1,6 @@
 {
   "name": "jdlubrano-request-logger",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A web app to log incoming requests",
   "main": "index.js",
   "repository": "https://github.com/jdlubrano/jdlubrano-request-logger",
