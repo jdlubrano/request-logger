@@ -14,7 +14,21 @@ const IMAGES = [
 ];
 
 app.use(cors());
-app.use(express.json());
+
+app.use(express.json({
+  verify: (req, res, buf, encoding) => {
+    req.rawBody = buf.toString();
+  }
+}));
+
+app.use((error, req, res, next) => {
+  if (error instanceof SyntaxError) {
+    console.log(`JSON error - Raw request ${req.rawBody}`);
+  }
+
+  next();
+});
+
 app.use('/', express.static('public'));
 
 app.get('/ping', (req, res) => res.send('pong'));
